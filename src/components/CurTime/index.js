@@ -9,27 +9,31 @@ const CurTime = ({ timeZone }) => {
   useEffect(() => {
     setInterval(() => {
       const date = new Date();
+      const option = {
+        timeZone: timeZone,
+        hour12: false,
+      };
       setCurHour(
         new Intl.DateTimeFormat('en-US', {
-          timeZone: timeZone,
-          hour: 'numeric',
-          hour12: false,
+          ...option,
+          hour: '2-digit',
         }).format(date)
       );
       setCurMinute(
         new Intl.DateTimeFormat('en-US', {
-          timeZone: timeZone,
-          minute: 'numeric',
+          ...option,
+          minute: '2-digit',
         }).format(date)
       );
       setCurSecond(
         new Intl.DateTimeFormat('en-US', {
-          timeZone: timeZone,
-          second: 'numeric',
+          ...option,
+          second: '2-digit',
         }).format(date)
       );
     }, 1000);
   }, [timeZone]);
+
   return (
     <div className='CurTime'>
       <NumberBox number={curHour} /> :
