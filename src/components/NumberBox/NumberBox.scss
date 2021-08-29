@@ -1,0 +1,10 @@
+@import '../../index.scss';
+
+.NumberBox{
+  margin: 6px;
+  height: 78px;
+  width: 78px;
+  line-height: 78px;
+  text-align: center;
+  background-color: $primary-color-dark;
+}

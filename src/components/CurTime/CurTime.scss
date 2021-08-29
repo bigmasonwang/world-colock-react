@@ -1,0 +1,12 @@
+@import '../../index.scss';
+
+.CurTime {
+  @extend %flex-center;
+  flex-direction: row;
+  justify-content: center;
+  width: 360px;
+  height: 240px;
+  font-size: $font-size-large;
+  color: $white-color;
+  background-color: $primary-color;
+}

@@ -1,0 +1,6 @@
+@import '../../index.scss';
+
+.Clock {
+  @extend %flex-center;
+  margin-top: 20px;
+}

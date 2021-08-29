@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+.CurDate {
+  width: 360px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: $font-size-medim;
+  color: $white-color;
+  background-color: $primary-color-dark;
+}
